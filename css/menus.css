@@ -1,30 +1,13 @@
 /* CSS_File for Menus */
 
-.test_gradient_full {
-/* 566px 144 437 258 484 = 1889
-30% 7.6% 23.13% 13.65% 25.62%
-#fab300 #91823d #7cafdc #7d963b #c8d200
-drop shadow height: 10px 	
-*/	
-	background-image: -webkit-linear-gradient(to right, #fab300 30.05%,#91823d 30.07%, #91823d 37.59%, #7cafdc 37.61%, #7cafdc 60.72%,#7d963b 60.74%, #7d963b 74.37%,#c8d200 74.39%,#c8d200 100%);	
-	background-image: -moz-linear-gradient(to right, #fab300 30.05%,#91823d 30.07%, #91823d 37.59%, #7cafdc 37.61%, #7cafdc 60.72%,#7d963b 60.74%, #7d963b 74.37%,#c8d200 74.39%,#c8d200 100%);	
-	background-image: -o-linear-gradient(to right, #fab300 30.05%,#91823d 30.07%, #91823d 37.59%, #7cafdc 37.61%, #7cafdc 60.72%,#7d963b 60.74%, #7d963b 74.37%,#c8d200 74.39%,#c8d200 100%);	
-	background-image: -ms-linear-gradient(to right, #fab300 30.05%,#91823d 30.07%, #91823d 37.59%, #7cafdc 37.61%, #7cafdc 60.72%,#7d963b 60.74%, #7d963b 74.37%,#c8d200 74.39%,#c8d200 100%);	
-	background-image: linear-gradient(to right, #fab300 30.05%,#91823d 30.07%, #91823d 37.59%, #7cafdc 37.61%, #7cafdc 60.72%,#7d963b 60.74%, #7d963b 74.37%,#c8d200 74.39%,#c8d200 100%);	
+@media print {
 
-	/*background-size: contain;*/
+	.toc_tree_wrapper {
+		display: none;
+		visibility: none;
+	}
+
 }
-
-.test_gradient {
-  background: 
-	linear-gradient(
-		  to right, 
-		  #ffb500,
-		  #7bb1db 50%,
-		  #c9d200 100%
-    );	
-}
-
 /*ffb500 7bb1db c9d200*/
 /* rgb(255, 181, 0) rgb(123, 177, 219) rgb(201, 210, 0) */
 .toc_tree_wrapper {
@@ -63,7 +46,9 @@ drop shadow height: 10px
 }
 
 .toc_tree_wrapper ol.tree {
-	padding:;
+	max-height: 500px;
+    overflow-y: scroll;
+	padding: 0px;
 	font-family :"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
 	font-size: 11pt;
 	font-weight: normal;
@@ -72,15 +57,12 @@ drop shadow height: 10px
 
 
 .toc_tree_wrapper ol {
-	padding: 3px 0px 0px 5px;
-	
+	padding: 3px 0px 0px 5px;	
 	margin: 0;
-	
-	
-
 }
 
 .toc_tree_wrapper li {
+	/* Variant 1: fade in on hover and no transition on dehover*/
 	padding: 5px; /*top right bottom left*/
 	margin: 0px 0px 0px 0px;
 	/*border-top: 0.5px solid #dbdbdb;*/
@@ -90,11 +72,34 @@ drop shadow height: 10px
 }
 
 .toc_tree_wrapper li:hover {
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-	
-	
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
 	background-color: #c9d200;
+	/*left-menu color-default: #f4f4f5 active: #4a4a4d (grey) hover: #e8e8e9*/
 	transition: all .15s ease-in;
+	cursor: pointer;	
+	
+}
+
+
+._var2_toc_tree_wrapper li {
+	/* Variant 2: fade in on hover and fade out again on dehover*/
+	padding: 5px; /*top right bottom left*/
+	margin: 0px 0px 0px 0px;
+	/*border-top: 0.5px solid #dbdbdb;*/
+	/*border-bottom: 0.5px solid #939393;*/
+	list-style-type: none;
+	background-color: #fff;
+    -webkit-transition: background-color 1000ms linear;
+    -moz-transition: background-color 1000ms linear;
+    -o-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
+	
+}
+
+._var2_toc_tree_wrapper li:hover {
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+	background-color: #c9d200;
 	cursor: pointer;	
 	
 }

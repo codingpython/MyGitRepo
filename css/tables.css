@@ -1,0 +1,413 @@
+/*
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+html {
+  background: rgb(246, 248, 248);
+}
+body {
+  padding: 40px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;  
+}
+.promos {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.promo {
+  width: 250px;
+  background: #0F1012; 
+  color: #f9f9f9;
+  float: left;
+}
+.deal {
+  padding: 10px 0 0 0;
+}
+.deal span {
+  display: block;
+  text-align: center;
+}
+.deal span:first-of-type {
+  font-size: 23px;  
+}
+.deal span:last-of-type {
+  font-size: 13px;
+}
+.promo .price {
+  display: block;
+  width: 250px;  
+  background: #292b2e;
+  margin: 15px 0 10px 0;
+  text-align: center;
+  font-size: 23px;
+  padding: 17px 0 17px 0;
+}
+ul {
+  display: block;
+  margin: 20px 0 10px 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+  color: #999999;
+}
+li {
+  display: block;
+  margin: 10px 0 0 0;
+}
+button {
+  border: none;
+  border-radius: 40px;
+  background: #292b2e;
+  color: #f9f9f9;
+  padding: 10px 37px;
+  margin: 10px 0 20px 60px;
+}
+.scale {
+  transform: scale(1.2);
+  box-shadow: 0 0 4px 1px rgba(20, 20, 20, 0.8);
+}
+.scale button {
+  background: #ff0dad;
+}
+.scale .price {
+  color: #64AAA4;
+}
+*/
+
+
+/* Table Example 1 
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
+
+body {
+  background-color: #3e94ec;
+  font-family: "Roboto", helvetica, arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+}
+
+div.table-title {
+   display: block;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+}
+
+.table-title h3 {
+   color: #fafafa;
+   font-size: 30px;
+   font-weight: 400;
+   font-style:normal;
+   font-family: "Roboto", helvetica, arial, sans-serif;
+   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+   text-transform:uppercase;
+}
+
+
+Table Styles
+
+.table-fill {
+  background: white;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: 320px;
+  margin: auto;
+  max-width: 600px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+th {
+  color:#D5DDE5;;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:24px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom-: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+tr:first-child {
+  border-top:none;
+}
+
+tr:last-child {
+  border-bottom:none;
+}
+ 
+tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}
+
+*/
+
+/*
+Table-Colors:
+lightblue: #66ccff
+darkblue: #0865c2
+
+*/
+
+
+/* MY TABLE */
+.wrapper_mytable {
+	width: 100%;
+	/*with a width of 100% the right border will not be visible
+	this is a workaround
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	z-index: 99;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+	overflow-x: scroll;	
+}
+.mytable_title_wrap {
+	width: 100%;
+	display: table;
+}
+
+/*old*/
+.mytable_title {
+	width: 100%;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+		
+	font-size: 25px;
+	font-weight: 400; /*400: normal 900:bold*/
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(10, 12, 14, 0.1);
+	font-family: Arial, "Open Sans", "Helvetica Neue", sans-serif;
+	
+	display: table-cell;
+	vertical-align: middle;
+	
+	color: #ccc123;
+	background: #eeeeee;	
+	
+}
+
+.mytable_caption {
+	padding: 2px;
+	margin-bottom: 3px;		
+	font-size: 25px;
+	font-weight: 400; /*400: normal 900:bold*/
+	text-align: center;
+	text-shadow: 1px 1px 1px rgba(10, 12, 14, 0.1);
+	color: #ccc123; /* lime-gold */
+	background: #ffffff;		
+	border: 0px solid black;
+}
+
+.mytable {
+	table-layout: fixed;
+	/*width: 100%;*/	
+	min-width: 350px; /*force a min-width to compensate at least for titles with a medium-length*/
+	height: auto;
+	padding: 0; 
+	/*for 100% width do not use a margin, since it is not part of the box-model-calculation
+	the right side (border) will be cut off*/
+	margin: 0;	
+	/* border: 1px solid #ccc123; */	
+	border-collapse: collapse;
+	caption-side: top;
+	
+	overflow: hidden; /*for column hover*/
+}
+
+.mytable tr {
+	width: 100%;
+	height: auto;
+	padding: 0;
+	margin: 0;
+}
+
+/*format every nth row*/
+.mytable tr:nth-child(even) {	
+	background-color: #f2f2f2;	
+}
+
+/*format every nth column*/
+.mytable tr td:nth-child(even) {	
+	/*background-color: #ffeddc;*/
+}
+
+/* the first element (col and row) of the table header has different properties 
+	than the first column; so we access it separately font-weight: 1500;*/
+.mytable tr th:first-child {
+	border-right: 2px solid #9ea7af;
+}	
+
+/*access the first column only*/
+.mytable tr td:first-child{
+	font-weight: bold;
+	background-color: #f2f2f2; /*f2f2f2*/
+	border-right: 2px solid #9ea7af;
+	
+}
+
+.mytable thead {	
+}
+.mytable th {
+	padding: 10px;
+	margin: 0 0 2px 0;
+	
+	font-size: 15px;
+	font-weight: bold;
+	text-align: middle;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	vertical-align: middle;
+	
+	color: #424242;
+	background: #e6e6e6;
+	border-bottom: 3px solid #9ea7af;
+	border-right: 1px solid #9ea7af;	
+}
+
+.mytable tbody {
+}
+.mytable td {
+	/*min-width: 25px;*/
+	max-width: 200px; /*be careful with this one, the table might not behave as you want to*/
+	padding: 3px 6px 3px 4px; 
+	margin: 0;
+	font-size: 15px;
+	font-weight: normal;
+	text-align: left;
+	text-shadow: 2px 2px 1px rgba(50, 150, 0, 0.1); /**/
+	vertical-align: middle;	
+	border: 1px solid #ccc123;
+}
+
+
+/*Table Head hover one row*/
+.mytable thead tr th:hover {
+	background-color: #00ff00;
+	
+	/*box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;*/
+	/*transform: translate3d(6px, -6px, 0);*/
+	transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: line;
+}
+
+
+/*Table Body hover one row*/
+.mytable tbody tr:hover {
+
+	background-color: #e2e2e2;
+	color: #403E10;
+	font-weight: bold;
+
+	/*box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;*/
+	/*transform: translate3d(6px, -6px, 0);*/
+	
+	transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: line;
+}
+
+
+/*Table Body hover one column: Not possible without downsides*/
+
+/*Table Body hover first element in a row*/
+.mytable tbody tr td:first-child:hover {
+
+	background-color: #ff0000;
+	color: #403E10;
+	font-weight: bold;
+
+	/*box-shadow: #7F7C21 -1px 1px, #7F7C21 -2px 2px, #7F7C21 -3px 3px, #7F7C21 -4px 4px, #7F7C21 -5px 5px, #7F7C21 -6px 6px;*/
+	/*transform: translate3d(6px, -6px, 0);*/
+	
+	transition-delay: 0s;
+	transition-duration: 0.4s;
+	transition-property: all;
+	transition-timing-function: line;
+}
