@@ -1,0 +1,14 @@
+Must have PlugIns, Addons, Custom stuff	
+Labview:	
+FlatlineUIControls	https://bitbucket.org/drjdpowell/flatline-controls-for-labview/downloads/
+VI	https://lavag.org/files/file/245-labview-task-manager-lvtm/
+	
+TaskManager	https://lavag.org/topic/14921-labview-task-manager/
+GetClickedIndex	https://forums.ni.com/t5/Example-Program-Drafts/Determine-Clicked-Array-Element-Index-in-LabVIEW/ta-p/3536340
+	
+Instrument Control (REN)	http://zone.ni.com/reference/en-XX/help/371361P-01/lvinstio/visa_gpib_control_ren/
+VISA Lock / Unlock	http://zone.ni.com/reference/en-XX/help/370131S-01/ni-visa/viunlock/
+VISA Search	http://zone.ni.com/reference/en-XX/help/371361H-01/lvinstio/visa_find_resource/
+	
+	
+ListBoxes	https://forums.ni.com/t5/LabVIEW/multicolumn-listbox-scroll-to-last-element/td-p/3075039
