@@ -1,0 +1,88 @@
+import pandas as pd
+import xlrd
+from IPython.display import display, HTML
+
+path = r''
+
+df = pandas.read_excel(path)
+display(df)
+#print the column names
+print df.columns
+#get the values for a given column
+values = df['Name'].values
+#get a data frame with selected columns
+FORMAT = ['Name', 'DSPName', 'PinCode']
+df_selected = df[FORMAT]
+
+# slice pd into sub-tables
+
+isnull = df.ID.notna() #isnull()
+partitions = (isnull != isnull.shift()).cumsum()
+tables_list = df[isnull].groupby(partitions)
+
+display(tables_list)
+
+for name, g in tables_list:
+    g.reset_index(drop=True, inplace=True)
+    display(g)
+    
+    
+keys = tables_list.groups.keys()
+dfs = pd.concat([tables_list.get_group(g) for g in keys], keys=keys)
+#dfs
+
+
+def to_xml(df, filename=None, mode='w'):
+    def row_to_xml(row):
+        xml = ['<item>']        
+        xml.append('  <map name="{0}">{1}</map>'.format(row.index[0], row.iloc[0]))
+        for i, col_name in enumerate(row.index[1:]):            
+            xml.append('  <field name="{0}">{1}</field>'.format(col_name, row.iloc[i+1]))
+        xml.append('</item>')
+        return '\n'.join(xml)
+    
+    res = '\n'.join(df.apply(row_to_xml, axis=1))
+
+    if filename is None:
+        return res
+    with open(filename, mode) as f:
+        f.write(res)
+        
+pd.DataFrame.to_xml = to_xml
+
+
+
+xml_out = df.to_xml()
+
+#print(xml_out)
+
+file_path= r'L:\Program Files (x86)\Python\myFunc\Excel'
+file_name1= '\genmap.xml'
+
+
+
+
+table_file_out = '<?xml version="1.0"?>\n <data>\n'
+for name, g in tables_list:
+    to_xml(g, file_path+'\genmap_{0}.txt'.format(name))    
+    table_file_out += '<table>\n' + (to_xml(g)) + '\n</table>\n'
+    display(g)
+    
+table_file_out += '</data>'   
+display(table_file_out)        
+with open(file_path+file_name1, 'w+') as fo:
+    fo.write(table_file_out)    
+    
+    
+    
+    import xml.etree.ElementTree as ET
+
+#tree = ET.ElementTree(ET.fromstring(table_file_out))
+
+tree = ET.parse('L:\Program Files (x86)\Python\myFunc\Excel\genmap.xml')
+root = tree.getroot()
+display(tree)
+display(root[1].tag)
+
+for child in root:
+    print(child.tag, child.attrib)
