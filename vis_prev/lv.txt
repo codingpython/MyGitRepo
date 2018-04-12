@@ -16,3 +16,6 @@ ListBoxes	https://forums.ni.com/t5/LabVIEW/multicolumn-listbox-scroll-to-last-el
 
 LabView SVN Merge Tool	http://delacor.com/configuring-hg-or-git-to-use-labview-compare-and-labview-merge/
                         https://forums.ni.com/t5/Example-Program-Drafts/Source-Code-Control-Using-TortoiseSVN-Subversion-with-LabVIEW/ta-p/3510829
+
+                        
+GUID.vi     C:\Program Files\National Instruments\LabVIEW 2017\resource\Framework\Providers\API\mxLvGenerateGuid.vi                        
