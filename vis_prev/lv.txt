@@ -19,3 +19,11 @@ LabView SVN Merge Tool	http://delacor.com/configuring-hg-or-git-to-use-labview-c
 
                         
 GUID.vi     C:\Program Files\National Instruments\LabVIEW 2017\resource\Framework\Providers\API\mxLvGenerateGuid.vi                        
+
+
+
+
+Build/Installer:
+
+Installer.Banner.Size = 578x59
+Installer.Welcome.Size = 578x383
