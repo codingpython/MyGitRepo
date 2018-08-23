@@ -21,9 +21,15 @@ LabView SVN Merge Tool	http://delacor.com/configuring-hg-or-git-to-use-labview-c
 GUID.vi     C:\Program Files\National Instruments\LabVIEW 2017\resource\Framework\Providers\API\mxLvGenerateGuid.vi                        
 
 
-
+Register ActiveX https://knowledge.ni.com/KnowledgeArticleDetails?id=kA00Z0000019MOqSAM
 
 Build/Installer:
 
 Installer.Banner.Size = 578x59
 Installer.Welcome.Size = 578x383
+
+
+CLI:
+the VI-Path MUST be the first argument
+
+LabVIEWCLI -VIPath "C:\Users\inlabview.APAC\Documents\DemoProject\RunVI.vi" -OperationName RunVI 
